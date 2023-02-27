@@ -1,0 +1,61 @@
+{% load widget_tweaks %}
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <title>اتوماسیون اداری</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div style="height:47rem; padding: 1rem;" class="col-3">
+                <div class="w-100 h-100 menu">
+                    <p class="title">اتوماسیون</p>
+                    <hr><br>
+                    <div class="item">{{user.username}} خوش آمدید</div>
+                    <div class="item">
+                        <a href="{% url 'system:dashboard' %}">داشبورد</a>
+                    </div>
+                    <div class="item" id="accordionFlushExample">
+                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                نامه نگاری
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                            </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <a href="{% url 'system:namenegari' %}">ارسال نامه</a><br>
+                                <a href="{% url 'system:list-name' %}">نامه های دریافتی من</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">سمت ها</div>
+                    <div class="item">حضور و غیاب</div>
+                    <div class="item">تنظیمات سایت</div>
+                    <div class="item">
+                        <a href="{% url 'account:logout' %}">خروج از اتوماسیون</a>
+                    </div>
+                </div>
+            </div>
+            <div style="height:47rem; padding: 1rem;" class="col-9">
+                <div class="w-100 h-100 menu">
+                    
+                    {% block content %}
+                        
+                    {% endblock content %}
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

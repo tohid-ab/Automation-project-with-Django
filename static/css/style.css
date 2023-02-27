@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "Vazirmatn";
+    src: url(../fonts/fonts/webfonts/Vazirmatn-Medium.woff2) format("woff2");
+    font-weight: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Vazirmatn";
+}
+
+:root {
+    --main-bg-color: #28475C;
+    --color-t: white;
+}
+
+body {
+    background: #13212a;
+    color: var(--color-t);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.header {
+    height: 5rem;
+    text-align: center;
+    font-size: 28px;
+    background-color: var(--main-bg-color);
+    color: var(--color-t);
+}
+
+.login {
+    margin: 10rem 0;
+    padding: 41px;
+    background-color: var(--main-bg-color);
+    border-radius: 9px;
+}
+
+#yes {
+    display: none;
+}
+
+#yes.active {
+    display: inline-block;
+}
+
+.menu {
+    padding-top: 5px;
+    color: var(--color-t);
+    background-color: var(--main-bg-color);
+    border-radius: 11px;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.item {
+    padding: 8px;
+    margin: 12px 13px;
+    background-color: #2F8886;
+    border-radius: 10px;
+}
+
+.item button {
+    color: white;
+    border: none;
+    background-color: #ffffff00;
+}
+
+.welcom {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.title-info {
+    padding: 7px 0;
+    background-color: #ffffff14;
+    border: 1px solid #3b8886;
+    border-radius: 5px;
+}
+
+.form-css {
+    background-color: #ffffff14;
+    border: 1px solid #3b8886;
+    color: white;
+    border-radius: 5px;
+}
+
+.form-css:focus-visible {
+    outline: none;
+}
+
+.form-css:focus {
+    background-color: #ffffff00;
+    color: white;
+}
+
+.form-css2 {
+    width: 16rem;
+    margin: auto;
+    background-color: #ffffff14;
+    border: 1px solid #3b8886;
+    color: white;
+    border-radius: 5px;
+}
+
+.form-css2:focus-visible {
+    outline: none;
+}
+
+.form-css2:focus {
+    background-color: #ffffff00;
+    color: rgb(0, 0, 0);
+}
+
+.button-submit {
+    float: left;
+    padding: 0.5rem 2rem;
+    color: white;
+    background-color: #2F8886;
+    border-radius: 10px;
+    border: none;
+}
+
+.search {
+    height: 3rem;
+    margin: auto;
+}
+
+.search input {
+    border: none;
+    background: none;
+    color: white;
+}
+
+.search input:focus-visible {
+    outline: none;
+}
+
+.search input:focus {
+    background-color: #ffffff00;
+    color: white;
+}
+
+.demTable {
+    padding: 5px;
+    margin: 21px auto;
+    text-align: center;
+}
+
+.demTable th {
+    padding: 10px;
+}

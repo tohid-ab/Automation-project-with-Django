@@ -1,0 +1,25 @@
+{% extends 'all.html' %} 
+{% load static %} 
+{% block content %}
+<div class="w-50 alert alert-success welcom" role="alert">
+  به اتوماسیون اداری خوش آمدید
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 info text-center">
+      <p class="title-info">تعداد کل کاربران</p>
+      <p>{{ usercount }} نفر</p>
+    </div>
+    <div class="col-4 info text-center">
+      <p class="title-info">حضور و غیاب</p>
+      <p>حاضر : 0 نفر</p>
+      <p>غایب : 0 نفر</p>
+    </div>
+    <div class="col-4 info text-center">
+      <p class="title-info">تمامی نامه های دریافتی</p>
+      <p>همه : 0</p>
+      <p>نامه های من : 0</p>
+    </div>
+  </div>
+</div>
+{% endblock content %}

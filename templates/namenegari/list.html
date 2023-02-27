@@ -1,0 +1,57 @@
+{% extends 'all.html' %} 
+{% load static %} 
+{% block content %}
+<div class="w-50 alert alert-success welcom" role="alert">
+    تمامی نامه های دریافتی
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="w-50 form-css search">
+            <form method="get">
+                <input class="w-75 h-100" type="search" placeholder="جستجو">
+                <button class="" type="submit">تایید</button>
+            </form>
+        </div>
+        	<table class="w-100 demTable">
+          <thead>
+            <tr>
+              <th class="form-css">ردیف</th>
+              <th class="form-css">موضوع نامه</th>
+              <th class="form-css">از</th>
+              <th class="form-css">تاریخ دریافت</th>
+              <th class="form-css">اولویت</th>
+              <th class="form-css">مشاهده</th>
+              <th class="form-css">حذف</th>
+            </tr>
+            <tr>
+              <td class="form-css">&nbsp;</td>
+              <td class="form-css">&nbsp;</td>
+              <td class="form-css">&nbsp;</td>
+              <td class="form-css">&nbsp;</td>
+              <td class="form-css">&nbsp;</td>
+              <td class="form-css">
+                <a href="#" style="color: #00c522;">
+                  {% include 'icons/eye.html' %}
+                </a>
+              </td>
+              <td class="form-css">
+                <a href="#" style='color: #ff7777;'>
+                  {% include 'icons/trash.html' %}
+                </a>
+              </td>
+            </tr>
+          </thead>
+        </table>
+    </div>
+</div>
+<script>
+  var table = document.getElementsByTagName('table')[0],
+  rows = table.getElementsByTagName('tr'),
+  text = 'textContent' in document ? 'textContent' : 'innerText';
+
+for (var i = 0, len = rows.length; i < len; i++) {
+  rows[i].children[0][text] = i + ' ' + rows[i].children[0][text];
+}
+</script>
+
+{% endblock content %}

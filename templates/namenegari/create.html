@@ -1,0 +1,32 @@
+{% extends 'all.html' %}
+{% load widget_tweaks %}
+{% load static %}
+{% block content %}
+<div class="w-50 alert alert-success welcom" role="alert">
+    ثبت نامه جدید
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="">
+            <form method="post">
+                {% csrf_token %}
+                <label>از : </label>
+                <input class="form-control form-css" type="text" placeholder="{{user.username}}" disabled>
+                <br>
+                <label>موضوع : </label>
+                {% render_field form.title|add_class:"form-control form-css" %}
+                <br>
+                <div class="" style="display: flex;">
+                    <label>اولویت : </label>
+                    {% render_field form.priority|add_class:"form-control form-css2" %}
+                    <label>گیرنده : </label>
+                    {% render_field form.receiver|add_class:"form-control form-css2" %}
+                </div><br>
+                <label>متن نامه : </label><br>
+                {% render_field form.text|add_class:"form-control form-css" %}<br>
+                <button class="button-submit" type="submit">ارسال نامه</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
