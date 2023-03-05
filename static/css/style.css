@@ -136,9 +136,18 @@ a {
 }
 
 .search input {
+    height: 46px;
     border: none;
     background: none;
     color: white;
+}
+
+.btn-search {
+    float: left;
+    margin: 12px 0px;
+    background: none;
+    color: white;
+    border: none;
 }
 
 .search input:focus-visible {
@@ -158,4 +167,8 @@ a {
 
 .demTable th {
     padding: 10px;
+}
+
+.tb {
+    padding: 1rem 0;
 }
