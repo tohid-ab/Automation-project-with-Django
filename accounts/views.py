@@ -11,11 +11,9 @@ from .form import LoginForm
 def index(request):
     if request.method == 'POST':
         user_form = LoginForm(request.POST)
-        # تنظیمات لاگین
         if user_form.is_valid():
             username = request.POST.get('username')
             password = request.POST.get('password')
-            # برسی درخواست فرم و احراز هویت
             user = authenticate(request, username=username, password=password)
             if user is None:
                 messages.error(request, 'نام کاربری یا رمز عبور صحیح نمیباشد')
@@ -23,7 +21,6 @@ def index(request):
             login(request, user)
             return redirect(reverse('system:home'))
     else:
-        # برسی لاگین بودن کاربر
         if request.user.is_authenticated:
             return redirect('system:home')
         user_form = LoginForm()
